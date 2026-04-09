@@ -134,8 +134,8 @@
   /* orb placeholder for photo */
   .orb-wrap {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 260px;
+    height: 320px;
     margin: 0 auto 40px;
     opacity: 0;
     animation: fadeUp 0.9s ease 0.5s forwards;
@@ -143,20 +143,20 @@
 
   .orb {
     width: 100%; height: 100%;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, var(--forest), var(--teal), var(--deep), var(--moss), var(--forest));
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 130px 130px 100px 100px;
+    overflow: hidden;
     position: relative;
+    box-shadow: 0 20px 60px rgba(0,177,176,0.15), 0 0 0 1px rgba(0,177,176,0.2);
   }
 
   .orb::before {
     content: '';
     position: absolute;
-    inset: 3px;
-    border-radius: 50%;
-    background: var(--ink);
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,30,30,0.3) 100%);
+    z-index: 1;
+    pointer-events: none;
   }
 
   .orb-inner {
@@ -186,9 +186,9 @@
   /* spinning ring */
   .orb-ring {
     position: absolute;
-    inset: -12px;
-    border-radius: 50%;
-    border: 1px dashed rgba(0,177,176,0.25);
+    inset: -14px;
+    border-radius: 144px 144px 114px 114px;
+    border: 1px dashed rgba(0,177,176,0.2);
     animation: spin 20s linear infinite;
   }
 
@@ -577,9 +577,9 @@
     <div class="eyebrow">✦ The Shift Collective ✦ Free Gift</div>
 
     <div class="orb-wrap">
-      <div class="orb" style="overflow:hidden;background:none;border-radius:50%;">
+      <div class="orb">
         <div class="orb-ring"></div>
-        <img src="fatima-meditation.jpg" alt="Fatima Esmail meditating" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;position:relative;z-index:1;"/>
+        <img src="fatima-meditation.jpg" alt="Fatima Esmail meditating" style="width:100%;height:100%;object-fit:cover;object-position:65% 15%;display:block;"/>
       </div>
     </div>
 
